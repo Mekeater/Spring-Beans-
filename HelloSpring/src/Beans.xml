@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <!-- name或id都可以唯一表示bean 声明init-method/destroy-method方法进行声明周期的回调，
+         声明init-method/destroy-method方法也可以在框架中使用 元素中的 default-init-method 
+         和 default-destroy-method 属性定义，防止重复定义-->
+   <bean id="testid" class="com.tutorialspoint.HelloWorld" init-method="init" destroy-method="destroy">
+       <property name="message" value="Hello message Spring" ></property>
+   </bean>
+   <bean class="com.tutorialspoint.InitHelloWorld"></bean>
+   
+   <bean id="testid1" class="com.tutorialspoint.HelloWorld" scope="singleton"></bean>
+   
+   <!-- Spring Bean继承实例,利用parent定义继承 -->
+   <bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+      <property name="message1" value="Hello World!"/>
+      <property name="message2" value="Hello Second World!"/>
+   </bean>
+   
+   <!-- 创建一个 Bean 定义模板,不应该指定类(class)的属性，而应该指定带 true 值的抽象属性(abstract="true") -->
+   
+   <bean id="helloIndia" class="com.tutorialspoint.HelloIndia" parent="helloWorld">
+      <property name="message1" value="Hello India!"/>
+      <property name="message3" value="Namaste India!"/>
+   </bean>
+   
+   
+   
+</beans>

@@ -1,0 +1,14 @@
+package com.DependencyInjection;
+
+public class TextEditor {
+	private SpellChecker spellChecker;
+	//类的构造函数
+	public TextEditor(SpellChecker spellChecker) {
+	      System.out.println("Inside TextEditor constructor." );
+	      this.spellChecker = spellChecker;
+	   }
+	//类方法
+	public void spellCheck() {
+		spellChecker.checkSpelling();
+	   }
+}

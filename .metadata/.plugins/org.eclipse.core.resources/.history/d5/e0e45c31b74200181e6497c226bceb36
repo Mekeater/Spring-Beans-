@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <!-- name或id都可以唯一表示bean 声明init-method/destroy-method方法进行声明周期的回调，
+         声明init-method/destroy-method方法也可以在框架中使用 元素中的 default-init-method 
+         和 default-destroy-method 属性定义，防止重复定义-->
+   <bean id="testid" class="com.tutorialspoint.HelloWorld" init-method="init" destroy-method="destroy">
+       <property name="message" value="Hello message Spring" ></property>
+       <property name="testStr" value="Hello str Spring!"/>
+   </bean>
+   
+   <bean id="testid1" class="com.tutorialspoint.HelloWorld" scope="singleton"></bean>
+   
+</beans>

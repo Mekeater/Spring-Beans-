@@ -1,0 +1,5 @@
+package com.springAopWithNote;
+
+public class Logging {
+
+}

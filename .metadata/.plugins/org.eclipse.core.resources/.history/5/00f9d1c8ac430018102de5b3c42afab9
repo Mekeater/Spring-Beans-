@@ -1,0 +1,11 @@
+package com.springAopWithNote;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+	 ApplicationContext context =  new ClassPathXmlApplicationContext("Beans.xml");
+     Student student = (Student) context.getBean("student");
+     student.getName();
+     student.getAge();     
+     student.printThrowException();
+}

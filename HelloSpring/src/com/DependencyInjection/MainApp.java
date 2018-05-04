@@ -1,0 +1,32 @@
+package com.DependencyInjection;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+	public static void main(String[] args) {
+		
+		//Spring基于构造函数的依赖注入(DI--Dependency Injection)
+//		ApplicationContext context=new ClassPathXmlApplicationContext("myBeans.xml");
+//		TextEditor textEditor=(TextEditor)context.getBean("textEditor");
+//		textEditor.spellCheck();
+		
+		//Spring基于设值函数的依赖注入
+//		ApplicationContext context=new ClassPathXmlApplicationContext("myBeans.xml");
+//		TextEditor textEditor=(TextEditor)context.getBean("textEditor");
+//		textEditor.spellCheck();
+		
+		//p-namespace 使用方法测试
+//		ApplicationContext context=new ClassPathXmlApplicationContext("myBeans.xml");
+//		SpellChecker spellChecker=(SpellChecker)context.getBean("test");
+//		System.out.println(spellChecker.getWhatDreamOfYou());
+		
+		/***Spring 注入集合***/
+		ApplicationContext  context = new ClassPathXmlApplicationContext("myBeans.xml");
+	    JavaCollection jc=(JavaCollection)context.getBean("javaCollection");
+	    System.out.println(jc.getAddressList());
+	    System.out.println(jc.getAddressSet());
+	    System.out.println(jc.getAddressMap());
+	    System.out.println(jc.getAddressProp());
+	}
+}

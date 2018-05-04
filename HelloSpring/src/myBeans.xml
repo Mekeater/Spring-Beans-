@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    
+   <!--Spring基于构造函数的依赖注入-->
+   <!-- Definition for textEditor bean -->
+   <!-- <bean id="textEditor" class="com.DependencyInjection.TextEditor">
+      <constructor-arg ref="spellChecker"/>
+   </bean> -->
+   
+   <!--Spring基于设值函数的依赖注入 -->
+   <!-- <bean id="textEditor" class="com.DependencyInjection.TextEditor">
+      <property name="spellChecker" ref="spellChecker"></property>
+   </bean> -->
+   
+   <!-- Definition for spellChecker bean -->
+   <!-- <bean id="spellChecker" class="com.DependencyInjection.SpellChecker"/>-->
+   
+   <!-- Spring注入内部Beans -->
+   <!-- <bean id="textEditor" class="com.DependencyInjection.TextEditor">
+   	 	<property name="spellChecker">
+     		<bean id="spellChecker" class="com.DependencyInjection.SpellChecker"/>
+  	 	</property>
+   </bean> -->
+   
+   <!-- p-namespace 使用方法测试 -->
+   <!-- <bean id="test" class="com.DependencyInjection.SpellChecker"
+   		p:whatDreamOfYou="我有一个梦想,hahha">
+   </bean> -->
+   
+   <!-- Spring 注入集合 -->
+   <bean id="javaCollection" class="com.DependencyInjection.JavaCollection">
+   		<property name="addressList">
+   			<list>
+   				<value>INDIA</value>
+            	<value>Pakistan</value>
+            	<value>USA</value>
+            	<value>USA</value>
+   			</list>
+   		</property>
+   		<property name="addressSet">
+   			<set>
+   				<value>INDIA</value>
+            	<value>Pakistan</value>
+            	<value>USA</value>
+            	<value>USA</value>
+   			</set>
+   		</property>
+   		<property name="addressMap">
+   			<map>
+   				<entry key="1" value="INDIA"/>
+            	<entry key="2" value="Pakistan"/>
+            	<entry key="3" value="USA"/>
+            	<entry key="4" value="USA"/>
+   			</map>
+   		</property>
+   		<property name="addressProp">
+   			<props>
+   				<prop key="one">INDIA</prop>
+            	<prop key="two">Pakistan</prop>
+            	<prop key="three">USA</prop>
+            	<prop key="four">USA</prop>
+   			</props>
+   		</property>
+   		
+   </bean>
+
+   
+</beans>

@@ -1,0 +1,12 @@
+package com.DependencyInjection;
+
+public class SpellChecker {
+	//类的构造函数
+	 public SpellChecker(){
+	      System.out.println("Inside SpellChecker constructor." );
+	   }
+	 //类方法
+	   public void checkSpelling() {
+	      System.out.println("Inside checkSpelling." );
+	   } 
+}

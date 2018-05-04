@@ -1,0 +1,22 @@
+package com.tutorialspoint;
+
+public class HelloWorld {
+	   private String message;
+	   private String testStr;
+	   
+	public String getMessage() {
+		return message;
+	}
+	public String getTestStr() {
+		return testStr;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public void setTestStr(String testStr) {
+		this.testStr = testStr;
+	}
+	   
+	   
+
+}

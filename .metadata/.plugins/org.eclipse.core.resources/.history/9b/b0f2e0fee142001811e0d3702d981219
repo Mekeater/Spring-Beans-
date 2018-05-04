@@ -1,0 +1,23 @@
+package com.DependencyInjection;
+
+public class SpellChecker {
+	/***Spring基于构造函数的依赖注入(DI--Dependency Injection)***/
+	//类的构造函数
+	/*public SpellChecker(){
+	      System.out.println("Inside SpellChecker constructor." );
+	   }
+	   public void checkSpelling() {
+	      System.out.println("Inside checkSpelling." );
+	   } */
+	
+	/***Spring基于设值函数的依赖注入***/
+//	 public SpellChecker(){
+//	      System.out.println("Inside SpellChecker constructor." );
+//	   }
+//	 public void checkSpelling() {
+//	      System.out.println("Inside checkSpelling." );
+//	   }  
+	
+	/***Spring 注入内部 Beans***/
+	
+}
